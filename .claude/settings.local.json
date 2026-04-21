@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -m pip install -e \".[dev]\")",
+      "Bash(python -m pytest tests/ -v)",
+      "Bash(llmgate models *)"
+    ]
+  }
+}

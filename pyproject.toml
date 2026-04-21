@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "llmgate"
+version = "0.1.0"
+description = "LLM routing, tiered model selection, and usage tracking for OpenRouter"
+requires-python = ">=3.10"
+dependencies = [
+    "requests>=2.31",
+    "tomllib; python_version < '3.11'",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "pytest-cov"]
+
+[project.scripts]
+llmgate = "llmgate.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["llmgate*"]
